@@ -47,6 +47,14 @@ commands:
             sudo n 13.8.0
             
 jobs:
+  verify-deployment:
+    executor: aws-cli/default
+    steps:
+      - aws-cli/install
+      - aws-cli/setup:
+          aws-access-key-id: AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_DEFAULT_REGION
+          aws-secret-access-key: AWS_DEFAULT_REGION
   deploy-infrastructure:
     docker:
       # Docker image here that supports AWS CLI
@@ -55,12 +63,6 @@ jobs:
       # Checkout code from git
       - checkout
       - run: yum install tar gzip -y
-      - run:
-          name: Configure region
-          command: |
-            aws configure
-            AKIA2MTNSYGQGKLZ6WEC
-            RYQjGhPGJ1RG9vaXF08od5EZ9VlJ+1bU0hTcDNZy
       - run:
           name: Ensure eks deployment is successful
           command: |
