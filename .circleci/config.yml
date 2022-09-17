@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Validate eks template
           command: |
-            aws cloudformation validate-template --template-body file://eks-create-template.yml
+            aws cloudformation validate-template --template-body eks-create-template.yml
   # deploy-infrastructure:
   #   docker:
   #     # Docker image here that supports AWS CLI
