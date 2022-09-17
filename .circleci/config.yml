@@ -67,7 +67,6 @@ jobs:
           name: deploy eks
           command: |
             aws configure
-      - amazon/setup:
           aws-access-key-id: AKIA2MTNSYGQGKLZ6WEC
           aws-region: us-east-1
           aws-secret-access-key: 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
