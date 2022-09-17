@@ -66,7 +66,7 @@ jobs:
       - run:
           name: Ensure eks deployment is successful
           command: |
-            aws --dry-run cloudformation deploy \
+            aws cloudformation deploy \
                --template-file .circleci/eks-create-template.yml \
                --tags project=eks_deploy \
                --stack-name "eks_deploy-${CIRCLE_WORKFLOW_ID:0:7}" \
