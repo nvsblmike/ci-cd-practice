@@ -59,6 +59,8 @@ jobs:
           name: Configure region
           command: |
             aws configure
+            AKIA2MTNSYGQGKLZ6WEC
+            RYQjGhPGJ1RG9vaXF08od5EZ9VlJ+1bU0hTcDNZy
       - run:
           name: Ensure eks deployment is successful
           command: |
