@@ -52,9 +52,9 @@ jobs:
     steps:
       - aws-cli/install
       - aws-cli/setup:
-          aws-access-key-id: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_DEFAULT_REGION
-          aws-secret-access-key: AWS_DEFAULT_REGION
+          aws-access-key-id: AKIA2MTNSYGQGKLZ6WEC
+          aws-region: us-east-1
+          aws-secret-access-key: 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
   deploy-infrastructure:
     docker:
       # Docker image here that supports AWS CLI
