@@ -69,6 +69,7 @@ jobs:
             aws cloudformation deploy \
                --template-file .circleci/eks-create-template.yml \
                --tags project=eks_deploy \
+               --s3-bucket eks_deploys \
                --stack-name "eks_deploy-${CIRCLE_WORKFLOW_ID:0:7}" \
                --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"      
       - destroy-environment:
